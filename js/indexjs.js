@@ -131,9 +131,17 @@ document.getElementById('copy-btn-rail').addEventListener('click',
     }
 )
 // copyNumber section end
-
+function hotlineName(id){
+    const nameHotline=document.getElementById(id).innerText
+    return nameHotline;
+}
+function hotlineNumber(id){
+    const numberHotline=document.getElementById(id).innerText
+    return numberHotline;
+}
 
 // call section start
+
 function creatInnertext(id){
     const number=document.getElementById(id);
     const numberInnertext=number.innerText;
@@ -156,6 +164,7 @@ function coinCount(){
         document.getElementById('coin-btn').innerText=remainingCoin;
         return true;
 }
+const history=[]
 document.getElementById('call-btn-national').addEventListener('click',
     function (){
         if(!coinCount()){
@@ -164,6 +173,13 @@ document.getElementById('call-btn-national').addEventListener('click',
         const alertNameNumber=callingNameNumber('national','copy-text-national')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('national'),
+            number:hotlineNumber('copy-text-national'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-police').addEventListener('click',
@@ -174,6 +190,13 @@ document.getElementById('call-btn-police').addEventListener('click',
         const alertNameNumber=callingNameNumber('police','copy-text-police')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('police'),
+            number:hotlineNumber('copy-text-police'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-fire').addEventListener('click',
@@ -184,6 +207,13 @@ document.getElementById('call-btn-fire').addEventListener('click',
         const alertNameNumber=callingNameNumber('fire','copy-text-fire')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('fire'),
+            number:hotlineNumber('copy-text-fire'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-ambulance').addEventListener('click',
@@ -194,6 +224,13 @@ document.getElementById('call-btn-ambulance').addEventListener('click',
         const alertNameNumber=callingNameNumber('ambulance','copy-text-ambulance')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('ambulance'),
+            number:hotlineNumber('copy-text-ambulance'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-woman').addEventListener('click',
@@ -204,6 +241,13 @@ document.getElementById('call-btn-woman').addEventListener('click',
         const alertNameNumber=callingNameNumber('woman','copy-text-woman')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('woman'),
+            number:hotlineNumber('copy-text-woman'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-gov').addEventListener('click',
@@ -214,6 +258,13 @@ document.getElementById('call-btn-gov').addEventListener('click',
         const alertNameNumber=callingNameNumber('anti','copy-text-gov')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('anti'),
+            number:hotlineNumber('copy-text-gov'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-electricity').addEventListener('click',
@@ -224,6 +275,13 @@ document.getElementById('call-btn-electricity').addEventListener('click',
         const alertNameNumber=callingNameNumber('outage-1','copy-text-electricity')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('outage-1'),
+            number:hotlineNumber('copy-text-electricity'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-brac').addEventListener('click',
@@ -234,6 +292,13 @@ document.getElementById('call-btn-brac').addEventListener('click',
         const alertNameNumber=callingNameNumber('brac','copy-text-brac')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('brac'),
+            number:hotlineNumber('copy-text-brac'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 document.getElementById('call-btn-rail').addEventListener('click',
@@ -244,7 +309,34 @@ document.getElementById('call-btn-rail').addEventListener('click',
         const alertNameNumber=callingNameNumber('rail','copy-text-rail')
         // console.log(alertNameNumber)
         alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+        const data={
+            name:hotlineName('rail'),
+            number:hotlineNumber('copy-text-rail'),
+            date:new Date().toLocaleTimeString()
+        }
+        history.push(data);
+        historyAddFunction()
     }
 )
 
 // call section end
+function historyAddFunction(){
+    const historyAdd=document.getElementById('history-btn')
+        for(const data of history){
+            // historyAdd.innerHTML=''
+            const div=document.createElement('div')
+            div.innerHTML=`
+               <div class="flex justify-between items-center   rounded-xl m-6 bg-[#fafafa] md:w-[353px] w-[325px] h-[72px] p-4">
+                            <div>
+                                <h1 class="text-xl font-medium">${data.name}</h1>
+                                <p class="font-medium">${data.number}</p>
+                            </div>
+                            <div>
+                                <h1>${data.date}</h1>
+                            </div>
+                        </div>
+
+            `
+            historyAdd.appendChild(div)
+        }
+}
