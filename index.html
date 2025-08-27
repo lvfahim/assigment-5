@@ -15,21 +15,21 @@
 </head>
 <body class="hind-madurai-light">
     <header>
-        <div class="flex justify-between px-[60px] py-[27px] items-center">
+        <div class="flex md:justify-between gap-1.5 justify-around px-[8px] md:px-[60px] py-[27px] items-center">
             <div class="flex gap-3">
                 <img class="w-[55px] h-[55px]" src="./assets/logo.png" alt="">
-                <h1 class="font-extrabold text-3xl text-[#006747]">Emergency <br> Service</h1>
+                <h1 class="font-extrabold md:text-3xl text-[#006747]">Emergency <br> Service</h1>
             </div>
-            <div class="flex justify-evenly gap-7">
-                <div class="flex gap-2.5 bg-[#41ff6b1a] w-[110px] h-[40px] justify-center items-center rounded-2xl">
+            <div class="flex justify-evenly gap-2 md:gap-7">
+                <div class="flex gap-2.5 bg-[#41ff6a63]  md:bg-[#41ff6b1a] p-1.5 md:p-0 md:w-[110px] h-[40px] justify-center items-center rounded-2xl">
                     <p id="health-btn" class="font-bold text-xl">0</p>
                     <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="">
                 </div>
-                <div class="flex gap-2.5 bg-[#41ff6b1a] w-[110px] h-[40px] justify-center items-center rounded-2xl">
+                <div class="flex gap-2.5  bg-[#41ff6a63]  md:bg-[#41ff6b1a] p-1.5 md:p-0 md:w-[110px] h-[40px] justify-center items-center rounded-2xl">
                     <p class="font-bold text-xl">100</p>
                     <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="">
                 </div>
-                <div class="flex gap-2.5 bg-[#00A63E] w-[110px] h-[40px] justify-center items-center rounded-2xl text-white">
+                <div class="flex gap-2.5  bg-[#00A63E] p-1.5 md:p-0 md:w-[110px] h-[40px] justify-center items-center rounded-2xl text-white">
                     <p id="nav-copy-btn" class="font-medium text-xl">0</p>
                     <h2 class="text-xl">copy</h2>
                 </div>
@@ -39,10 +39,10 @@
     <main class="bg-[#41ff6b1a]">
         <!-- banar section start -->
         <section class="flex justify-center bg-[#006747]">
-           <div class="h-[239px]">
-            <img class="mx-auto w-[92px] h-[92px] mt-[21px] mb-[11px]" src="./assets/logo-dark.png" alt="">
-            <h1 class="text-center font-bold text-[40px] text-white">Emergency Service Directory</h1>
-            <p class="font-semibold text-xl text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+           <div class="md:h-[239px] h-[300px]">
+            <img class="mx-auto md:w-[92px] md:h-[92px] w-[100px] h-[100px] mt-[21px] mb-[11px]" src="./assets/logo-dark.png" alt="">
+            <h1 class="text-center font-bold md:text-[40px] text-3xl my-3 text-white">Emergency Service Directory</h1>
+            <p class="md:font-semibold text-xl text-white text-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
            </div>     
         </section>
         <!-- banar section end -->
@@ -142,6 +142,54 @@
                         <p class="text-xl">Anti-Corruption</p>
                         <h1 id="copy-text-gov" class="font-bold text-4xl mt-6">106</h1>
                         <p class="w-[63px] h-[37px] rounded-2xl bg-[#5c5c5c4f] px-[16px] py-[6px] text-center">Govt.</p>
+                        <div class="flex justify-between gap-2.5 m-6">
+                            <button id="copy-btn-gov" class="w-[182px] h-[40px] border-gray-500 border-2 rounded-xl text-xl hover:bg-black hover:text-white"><i class="fa-regular fa-copy  text-xl"></i> copy</button>
+                            <button class="w-[182px] h-[40px] bg-[#00a63e] text-white rounded-xl text-xl"><i class="fa-solid fa-phone text-white"></i> call</button>
+                        </div>
+                    </div>
+                    <div class="w-[436px] h-[360px] p-[32px] shadow rounded-xl bg-white">
+                        <div class="flex justify-between">
+                            <div class="w-[60px] h-[60px] bg-[#FFE3E2]  p-[14px] rounded-xl">
+                                <img class="w-[32px] h-[32px] " src="./assets/emergency.png" alt="">
+                            </div>
+                            <i class="fa-regular fa-heart text-3xl" id="electricity-heart-btn"></i>
+                        </div>
+                        <h1 class="font-bold text-2xl mt-4">Electricity Helpline</h1>
+                        <p class="text-xl">Electricity Outage</p>
+                        <h1 id="copy-text-gov" class="font-bold text-4xl mt-6">16216</h1>
+                        <p class="w-[103px] h-[37px] rounded-2xl bg-[#5c5c5c4f] px-[16px] py-[6px] text-center">Electricity</p>
+                        <div class="flex justify-between gap-2.5 m-6">
+                            <button id="copy-btn-gov" class="w-[182px] h-[40px] border-gray-500 border-2 rounded-xl text-xl hover:bg-black hover:text-white"><i class="fa-regular fa-copy  text-xl"></i> copy</button>
+                            <button class="w-[182px] h-[40px] bg-[#00a63e] text-white rounded-xl text-xl"><i class="fa-solid fa-phone text-white"></i> call</button>
+                        </div>
+                    </div>
+                    <div class="w-[436px] h-[360px] p-[32px] shadow rounded-xl bg-white">
+                        <div class="flex justify-between">
+                            <div class="w-[60px] h-[60px] bg-[#FFE3E2]  p-[14px] rounded-xl">
+                                <img class="w-[32px] h-[32px] " src="./assets/fire-service.png" alt="">
+                            </div>
+                            <i class="fa-regular fa-heart text-3xl" id="brac-heart-btn"></i>
+                        </div>
+                        <h1 class="font-bold text-2xl mt-4">Brac Helpline</h1>
+                        <p class="text-xl">Brac</p>
+                        <h1 id="copy-text-gov" class="font-bold text-4xl mt-6">16445</h1>
+                        <p class="w-[63px] h-[37px] rounded-2xl bg-[#5c5c5c4f] px-[16px] py-[6px] text-center">NGO</p>
+                        <div class="flex justify-between gap-2.5 m-6">
+                            <button id="copy-btn-gov" class="w-[182px] h-[40px] border-gray-500 border-2 rounded-xl text-xl hover:bg-black hover:text-white"><i class="fa-regular fa-copy  text-xl"></i> copy</button>
+                            <button class="w-[182px] h-[40px] bg-[#00a63e] text-white rounded-xl text-xl"><i class="fa-solid fa-phone text-white"></i> call</button>
+                        </div>
+                    </div>
+                    <div class="w-[436px] h-[360px] p-[32px] shadow rounded-xl bg-white">
+                        <div class="flex justify-between">
+                            <div class="w-[60px] h-[60px] bg-[#FFE3E2]  p-[14px] rounded-xl">
+                                <img class="w-[32px] h-[32px] " src="./assets/brac.png" alt="">
+                            </div>
+                            <i class="fa-regular fa-heart text-3xl" id="rail-heart-btn"></i>
+                        </div>
+                        <h1 class="font-bold text-2xl mt-4">Bangladesh Railway Helpline </h1>
+                        <p class="text-xl">Bangladesh Railway</p>
+                        <h1 id="copy-text-gov" class="font-bold text-4xl mt-6">163</h1>
+                        <p class="w-[73px] h-[37px] rounded-2xl bg-[#5c5c5c4f] px-[16px] py-[6px] text-center">Travel</p>
                         <div class="flex justify-between gap-2.5 m-6">
                             <button id="copy-btn-gov" class="w-[182px] h-[40px] border-gray-500 border-2 rounded-xl text-xl hover:bg-black hover:text-white"><i class="fa-regular fa-copy  text-xl"></i> copy</button>
                             <button class="w-[182px] h-[40px] bg-[#00a63e] text-white rounded-xl text-xl"><i class="fa-solid fa-phone text-white"></i> call</button>

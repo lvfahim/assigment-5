@@ -40,57 +40,76 @@ document.getElementById('gov-heart-btn').addEventListener('click',
 
     }
 )
+document.getElementById('electricity-heart-btn').addEventListener('click',
+    function (){
+    heartNumber()
+
+    }
+)
+document.getElementById('brac-heart-btn').addEventListener('click',
+    function (){
+    heartNumber()
+
+    }
+)
+document.getElementById('rail-heart-btn').addEventListener('click',
+    function (){
+    heartNumber()
+
+    }
+)
 // increaseHealth section end
  
 // copyNumber section start 
-// function copyNumber(){
-//    const copyhBtn=  parseInt(document.getElementById('nav-copy-btn').innerText)
-//     const copyIncrizeNumber=1;
-//     const totalhealth=copyhBtn+copyIncrizeNumber
-//     document.getElementById('nav-copy-btn').innerText=totalhealth; 
-// }
-// function copyinnertext(id){
-//     const text=document.getElementById(id).innerText
-//         navigator.clipboard.writeText(text)
-//         .then(() => {
-//             alert('Your Number is copy : ' +  text)
-//         })
-// }
 
-// document.getElementById('copy-btn-national').addEventListener('click',
-//     function() {
-//         copyinnertext('copy-text-national');
-//         copyNumber();
-//     }
-// )
-// document.getElementById('copy-btn-police').addEventListener('click',
-//     function() {
-//         copyinnertext('copy-text-police');
-//         copyNumber();
-//     }
-// )
-// document.getElementById('copy-btn-fire').addEventListener('click',
-//     function() {
-//         copyinnertext('copy-text-fire');
-//         copyNumber();
-//     }
-// )
-// document.getElementById('copy-btn-ambulance').addEventListener('click',
-//     function() {
-//         copyinnertext('copy-text-ambulance');
-//         copyNumber();
-//     }
-// )
-// document.getElementById('copy-btn-woman').addEventListener('click',
-//     function() {
-//         copyinnertext('copy-text-woman');
-//         copyNumber();
-//     }
-// )
-// document.getElementById('copy-btn-gov').addEventListener('click',
-//     function() {
-//         copyinnertext('copy-text-gov');
-//         copyNumber();
-//     }
-// )
+function copyNumber(){
+   const copyhBtn=  parseInt(document.getElementById('nav-copy-btn').innerText)
+    const copyIncrizeNumber=1;
+    const totalhealth=copyhBtn+copyIncrizeNumber
+    document.getElementById('nav-copy-btn').innerText=totalhealth; 
+}
+function copyinnertext(id){
+    const text=document.getElementById(id).innerText
+        navigator.clipboard.writeText(text)
+        .then(() => {
+            alert('Your Number is copy : ' +  text)
+        })
+}
+
+document.getElementById('copy-btn-national').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-national');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-police').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-police');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-fire').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-fire');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-ambulance').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-ambulance');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-woman').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-woman');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-gov').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-gov');
+        copyNumber();
+    }
+)
 // copyNumber section end
