@@ -112,4 +112,22 @@ document.getElementById('copy-btn-gov').addEventListener('click',
         copyNumber();
     }
 )
+document.getElementById('copy-btn-electricity').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-electricity');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-brac').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-brac');
+        copyNumber();
+    }
+)
+document.getElementById('copy-btn-rail').addEventListener('click',
+    function() {
+        copyinnertext('copy-text-rail');
+        copyNumber();
+    }
+)
 // copyNumber section end
