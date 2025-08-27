@@ -140,18 +140,110 @@ function creatInnertext(id){
     const numberInnertextPar=parseInt(numberInnertext);
     return numberInnertextPar;
 }
-document.getElementById('call-btn-national').addEventListener('click',
-    function (){
-        const textNumber=document.getElementById('copy-text-national').innerText
-        const lostCoinNumber=20;
+function callingNameNumber(id1,id2){
+    const textName=document.getElementById(id1).innerText
+    const textNumber=document.getElementById(id2).innerText
+    return {name:textName, callNumber:textNumber};
+}
+function coinCount(){
+    const lostCoinNumber=20;
         const PresentCoin= creatInnertext('coin-btn');
         if(PresentCoin <20){
             alert("You don't have enough coins. A minimum of 20 coins is required to make a call");
-            return;
+            return false;
         }
         const remainingCoin=PresentCoin-lostCoinNumber;
         document.getElementById('coin-btn').innerText=remainingCoin;
-        alert(textNumber)
+        return true;
+}
+document.getElementById('call-btn-national').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('national','copy-text-national')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-police').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('police','copy-text-police')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-fire').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('fire','copy-text-fire')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-ambulance').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('ambulance','copy-text-ambulance')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-woman').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('woman','copy-text-woman')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-gov').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('anti','copy-text-gov')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-electricity').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('outage-1','copy-text-electricity')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-brac').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('brac','copy-text-brac')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
+    }
+)
+document.getElementById('call-btn-rail').addEventListener('click',
+    function (){
+        if(!coinCount()){
+            return;
+        }
+        const alertNameNumber=callingNameNumber('rail','copy-text-rail')
+        // console.log(alertNameNumber)
+        alert(`calling  ${alertNameNumber.name}  number   ${alertNameNumber.callNumber}`)
     }
 )
 
