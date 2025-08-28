@@ -166,8 +166,8 @@ function coinCount(){
 }
 function historyAddFunction(){
     const historyAdd=document.getElementById('history-btn')
+        historyAdd.innerHTML=''
         for(const data of history){
-            // historyAdd.innerHTML=''
             const div=document.createElement('div')
             div.innerHTML=`
                <div class="flex justify-between items-center   rounded-xl m-6 bg-[#fafafa] md:w-[353px] w-[325px] h-[72px] p-4">
@@ -343,8 +343,8 @@ document.getElementById('call-btn-rail').addEventListener('click',
 // Clear Section start 
 document.getElementById('clear-btn').addEventListener('click',
     function(){
-        const historyDeties=document.getElementById('history-btn');
-        historyDeties.innerHTML=``;
+        history.length = 0;
+        document.getElementById('history-btn').innerHTML = '';
     }
 )
 
