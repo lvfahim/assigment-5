@@ -164,6 +164,26 @@ function coinCount(){
         document.getElementById('coin-btn').innerText=remainingCoin;
         return true;
 }
+function historyAddFunction(){
+    const historyAdd=document.getElementById('history-btn')
+        for(const data of history){
+            // historyAdd.innerHTML=''
+            const div=document.createElement('div')
+            div.innerHTML=`
+               <div class="flex justify-between items-center   rounded-xl m-6 bg-[#fafafa] md:w-[353px] w-[325px] h-[72px] p-4">
+                            <div>
+                                <h1 class="text-xl font-medium">${data.name}</h1>
+                                <p class="font-medium">${data.number}</p>
+                            </div>
+                            <div>
+                                <h1>${data.date}</h1>
+                            </div>
+                        </div>
+
+            `
+            historyAdd.appendChild(div)
+        }
+}
 const history=[]
 document.getElementById('call-btn-national').addEventListener('click',
     function (){
@@ -318,25 +338,14 @@ document.getElementById('call-btn-rail').addEventListener('click',
         historyAddFunction()
     }
 )
-
 // call section end
-function historyAddFunction(){
-    const historyAdd=document.getElementById('history-btn')
-        for(const data of history){
-            // historyAdd.innerHTML=''
-            const div=document.createElement('div')
-            div.innerHTML=`
-               <div class="flex justify-between items-center   rounded-xl m-6 bg-[#fafafa] md:w-[353px] w-[325px] h-[72px] p-4">
-                            <div>
-                                <h1 class="text-xl font-medium">${data.name}</h1>
-                                <p class="font-medium">${data.number}</p>
-                            </div>
-                            <div>
-                                <h1>${data.date}</h1>
-                            </div>
-                        </div>
 
-            `
-            historyAdd.appendChild(div)
-        }
-}
+// Clear Section start 
+document.getElementById('clear-btn').addEventListener('click',
+    function(){
+        const historyDeties=document.getElementById('history-btn');
+        historyDeties.innerHTML=``;
+    }
+)
+
+// Clear Section end
