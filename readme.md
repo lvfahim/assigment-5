@@ -20,5 +20,31 @@ Ans:
 
 অবশেষে এটি কাজ করবে।
 
+3.What is Event Bubbling and how does it work?
+
+Ans:
+ JavaScript-এ যখন  click, submit ব্যবহার করো, তখন সেই event শুধু ওই element-এ সীমাবদ্ধ থাকে না। ওই ভেতরের element থেকে বাইরের parent element পর্যন্ত ধাপে ধাপে উপরে উঠতে থাকে।
+ ধরি,
+ আমরা প্রথমে একটি  section নি এবং একটা তার id নি,  এরপর ওই  section এর মধ্যে একটা div নি এবং তার ও একটা id নি এর div এর মধ্যে একটা h1, p এবং  button নি এবং তাদের ও একটা id নি। তারপর Java Script এর মধ্যে দিয়ে সব id এক এক করে ধরি।  এবং click function তৈরি করি।  এর ফলে আমার যখন button বা h1, p এ গুলো উপর click করবো তখন সে click হবে এবং তার  parent element গুলো কে তাও ধরবে।  কিন্তু যদি div 
+ বা section এর মধ্যে কিন্তু h1,p, button বাইরে click করি তখন শুরু div বা section ধরবে। 
+
+ অন্য দিকে শুধু button click করলে যেনো botton element টা কাজ করে এর জন্য আমরা even.stopPropagation() ব্যবহার করতে পারি।
+
+
+4.What is Event Delegation in JavaScript? Why is it useful?
+
+Ans:
+ Event Delegation হলো একটি টেকনিক, যেখানে আমরা প্রতিটি child element-এ আলাদা আলাদা event listener না বসিয়ে parent element-এ একটি event listener বসাই। তারপর event bubbling-এর মাধ্যমে বোঝা যায় কোন child element-এ event হয়েছে।
+ step1.পারফরম্যান্স ভালো হয় অনেক element থাকলেও একটাই listener কাজ করে।
+ step2.ডায়নামিক element হ্যান্ডেল করতে পারে পরে যদি নতুন child element যোগ হয়, তাতেও আলাদা event listener বসাতে হয় না।
+ step3.কোড ছোট ও পরিষ্কার হয় বারবার একই ধরনের কোড লিখতে হয় না।
+
+5.What is the difference between preventDefault() and stopPropagation() methods?
+
+Ans:
+ preventDefault() = কাজ বন্ধ করো
+ 1.এই method ব্রাউজারের default behavior বন্ধ করতে ব্যবহার করা হয়। Checkbox বা অন্যান্য form element-এর default কাজ বন্ধ করতে চাই
+ stopPropagation() = উপরে যেও না
+ 1.এই method event bubbling বন্ধ করতে ব্যবহার হয়। মানে event আর parent element-এ যাবে না।
 
        

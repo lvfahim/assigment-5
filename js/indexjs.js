@@ -170,7 +170,7 @@ function historyAddFunction(){
         for(const data of history){
             const div=document.createElement('div')
             div.innerHTML=`
-               <div class="flex justify-between items-center   rounded-xl m-6 bg-[#fafafa] md:w-[353px] w-[325px] h-[72px] p-4">
+               <div class="flex justify-between items-center mx-auto rounded-xl m-6 bg-[#fafafa] md:w-[353px] w-[325px] h-[72px] p-4">
                             <div>
                                 <h1 class="text-xl font-medium">${data.name}</h1>
                                 <p class="font-medium">${data.number}</p>
